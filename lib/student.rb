@@ -25,14 +25,15 @@ class Student
     SQL
 
     row = DB[:conn].execute(sql, name).flatten
-    binding.pry
+    # binding.pry
 
     # return a new instance of the Student class
-    student = Student.new
-    student.id = row[0]
-    student.name = row[1]
-    student.grade = row[2]
-    student
+    self.new_from_db(row)
+    # student = Student.new
+    # student.id = row[0]
+    # student.name = row[1]
+    # student.grade = row[2]
+    # student
 
   end
 
