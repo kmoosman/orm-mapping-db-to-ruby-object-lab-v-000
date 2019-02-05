@@ -22,7 +22,7 @@ class Student
       self.new_from_db(row)
     end
   end
-  
+
   def self.all
     # retrieve all the rows from the "Students" database
     # find the student in the database given a name
@@ -75,5 +75,5 @@ class Student
   end
 
 
-  
+
 end
