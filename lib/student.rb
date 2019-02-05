@@ -26,7 +26,7 @@ class Student
     row = DB[:conn].execute(sql, name)
 
     # return a new instance of the Student class
-    Student.new_from_db(row)
+    self.new_from_db(row)
 
   end
 
