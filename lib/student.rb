@@ -23,7 +23,7 @@ class Student
       WHERE name = ?
     SQL
 
-    row = DB[:conn].execute(sql, name)
+    row = DB[:conn].execute(sql, name).flatten[0]
 
     # return a new instance of the Student class
     self.new_from_db(row)
