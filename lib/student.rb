@@ -19,8 +19,11 @@ class Student
       SELECT * FROM students
     SQL
 
-    row = DB[:conn].execute(sql)
-    binding.pry
+    DB[:conn].execute(sql).map do |row|
+      self.new_from_db(row)
+    end
+
+    # binding.pry
     # remember each row should be a new instance of the Student class
   end
 
