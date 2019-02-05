@@ -1,3 +1,4 @@
+require 'pry';
 class Student
   attr_accessor :id, :name, :grade
 
@@ -24,6 +25,7 @@ class Student
     SQL
 
     row = DB[:conn].execute(sql, name).flatten[0]
+    binding.pry
 
     # return a new instance of the Student class
     student = Student.new
