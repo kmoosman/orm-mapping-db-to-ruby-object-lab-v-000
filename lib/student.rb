@@ -14,6 +14,12 @@ class Student
 
   def self.all
     # retrieve all the rows from the "Students" database
+    # find the student in the database given a name
+    sql = <<-SQL
+      SELECT * FROM students
+    SQL
+
+    row = DB[:conn].execute(sql).flatten
     # remember each row should be a new instance of the Student class
   end
 
