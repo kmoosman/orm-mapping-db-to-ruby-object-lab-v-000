@@ -23,7 +23,7 @@ class Student
       WHERE name = ?
     SQL
 
-    DB[:conn].execute(sql, name)
+    student = DB[:conn].execute(sql, name)
 
     # return a new instance of the Student class
   end
