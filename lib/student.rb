@@ -20,6 +20,7 @@ class Student
     SQL
 
     row = DB[:conn].execute(sql).flatten
+    binding.pry
     # remember each row should be a new instance of the Student class
   end
 
