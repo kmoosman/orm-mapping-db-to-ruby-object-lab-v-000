@@ -25,7 +25,6 @@ class Student
     SQL
 
     row = DB[:conn].execute(sql, name).flatten
-    # binding.pry
 
     # return a new instance of the Student class
     self.new_from_db(row)
