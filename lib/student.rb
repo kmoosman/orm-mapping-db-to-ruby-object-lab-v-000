@@ -24,7 +24,7 @@ class Student
       WHERE name = ?
     SQL
 
-    row = DB[:conn].execute(sql, name)
+    row = DB[:conn].execute(sql, name).flatten
     binding.pry
 
     # return a new instance of the Student class
